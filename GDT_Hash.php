@@ -24,7 +24,7 @@ abstract class GDT_Hash extends GDT_Char
 		return $this->getAlgoLength() * 2;
 	}
 	
-	public function toValue(string $var = null)
+	public function toValue($var = null)
 	{
 		return $var === null ? null : @mhash($this->getMHashId(), $var);
 	}
