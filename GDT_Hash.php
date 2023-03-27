@@ -25,7 +25,7 @@ abstract class GDT_Hash extends GDT_Char
 
 	abstract public function getMHashId(): int;
 
-	public function toValue($var = null)
+	public function toValue(null|string|array $var): null|bool|int|float|string|object|array
 	{
 		return $var === null ? null : @mhash($this->getMHashId(), $var);
 	}
